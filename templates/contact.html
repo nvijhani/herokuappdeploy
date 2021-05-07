@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Suggestions Page
+{% endblock title %}
+
+{% block body %}
+
+<div class="container my-4">
+    <div id="carouselExampleSlidesOnly m" class="carousel slide " data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+
+                <img class="d-block w-100" src="https://source.unsplash.com/1600x600/?suggestions,contactus,help,thankyou,notes,paper"
+                    alt="First slide">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-4">
+    <h1 class="text-center">
+        <lead>Any suggestions for me?<lead>
+    </h1>
+    <form method="POST" action="/suggestions">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="name" class="form-control" id="name" name = "name" placeholder="Enter your name here">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email here">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="Phone">Phone Number</label>
+            <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your Phone Number here">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Your Suggestion(s)</label>
+            <textarea class="form-control" id="suggestions"  name="suggestions" rows="3"></textarea>
+        </div>
+        <br>
+        <button class = "btn btn-primary"type="submit">Submit</button>
+    </form>
+</div>
+{% endblock body %}

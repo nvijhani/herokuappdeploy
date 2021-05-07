@@ -1,0 +1,72 @@
+{% extends 'background.html' %}
+
+{% block title %}
+Home
+{% endblock title %}
+
+{% block style %}
+
+{% endblock style %}
+
+{% block body %}
+
+ <div class="jumbotron jumbotron-fluid text-center" style = "height: 200px;
+    width: 700px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -350px;">
+
+  <div class="container">
+    <h1 class="display-4">Hello World, <strong>Nakul</strong> says hi!
+    </h1>
+    <p class="lead">DENT THE UNIVERSE</p>
+  </div>
+</div>
+
+<div class="row justify-content-center" style = "height: 5px;
+    width: 5px;
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    margin-top: -50px;
+    ">
+			<a class="btn links" href="https://www.linkedin.com/in/nakul-vijhani-9631b6204/"> 
+            <span id="linkedin" class="linkimg">
+            {% load static %}
+            <img src="{% static 'imgs/linkedin-icon.png' %}" width = "40" height = "40"  ></span></a>
+		</div>
+<div class="row justify-content-center" style = "height: 5px;
+                                                width: 5px;
+                                                position: fixed;
+                                                top: 70%;
+                                                left: 35%;
+                                                margin-top: -50px;
+                                                ">
+		
+			<a class="btn links" href="https://github.com/nvijhani"> 
+            <span id="github" class="linkimg">
+            {% load static %}
+            <img src="{% static 'imgs/github.png' %}" width = "70" height = "40"></span></a>
+
+		</div>
+<div class="row justify-content-center" style = "height: 5px;
+                                                width: 5px;
+                                                position: fixed;
+                                                top: 70%;
+                                                left: 63%;
+                                                margin-top: -50px;
+                                                ">
+		
+			<a class="btn links" href="https://www.instagram.com/nvijhani/"> 
+            <span id="instagram" class="linkimg">
+            {% load static %}
+            <img src="{% static 'imgs/instagram-25.png' %}" width = "40" height = "40"></span></a>
+
+		</div>
+
+
+
+{% endblock body %}
+
